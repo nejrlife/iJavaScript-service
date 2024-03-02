@@ -1,0 +1,76 @@
+###
+
+POST http://localhost:3000/customers
+Content-Type: application/json
+
+{
+  "id": "IK101",
+  "name": "Fenn tonn",
+  "last_login": "04 Mar 2019",
+  "balance": "£5000",
+  "transaction": [
+    {
+      "date": "01 Aug 2019",
+      "desc": "Room Rent",
+      "amount": "£900"
+    },
+    {
+      "date": "02 Jun 2019",
+      "desc": "Breakfast",
+      "amount": "£40"
+    },
+    {
+      "date": "02 Sep 2019",
+      "desc": "Dinner",
+      "amount": "£40"
+    }
+  ]
+}
+
+###
+
+DELETE http://localhost:3000/customers/650082e1e0536b824306d235
+
+###
+
+GET http://localhost:3000/users
+
+###
+
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+  "user": {
+    "id": "fenn_tonn_user",
+    "password": "wordpass",
+    "customer_id": "IJ101"
+  }
+}
+
+###
+
+DELETE http://localhost:3000/users/6501722e616e0522e890497d
+
+###
+
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "client_id": "iJavascript",
+  "user": {
+    "id": "test_tom_jha",
+    "password": "password"
+  }
+}
+
+###
+
+GET http://localhost:3000/users/isAuthenticated
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTAzMDU5ZjZmZGY3YTFiZTk2ZTZmNDIiLCJpYXQiOjE2OTQ2OTczODksImV4cCI6MTY5NDcwMzM4OX0.UU_ScJdGM6E69rZecHE-ypIGzSXSEJsu0LHZxkVBAFo
+
+###
+
+GET http://localhost:3000/customers/IJ101
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTAzMDU5ZjZmZGY3YTFiZTk2ZTZmNDIiLCJpYXQiOjE2OTQ2OTczODksImV4cCI6MTY5NDcwMzM4OX0.UU_ScJdGM6E69rZecHE-ypIGzSXSEJsu0LHZxkVBAFo
